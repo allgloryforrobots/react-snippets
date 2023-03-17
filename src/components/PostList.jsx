@@ -1,16 +1,11 @@
-import React, { useState } from 'react'
-import PostItem from './components/PostItem'
+import React from 'react'
+import PostItem from './PostItem'
 
-const PostList = ({ posts }) => {
-
-    const [posts, setPosts] = useState([
-        { id: 1, title: 'JavaScript', body: 'Description' },
-        { id: 2, title: 'JavaScript', body: 'Description' },
-    ])
+const PostList = ({title, posts}) => {
 
     return ( 
         <div>
-            <h1  style={{ textAlign: 'center' }}>Список постов</h1>
+            <h1  style={{ textAlign: 'center' }}>{title}</h1>
 
             {
                 posts.map(post => <PostItem key={post.id} post={post} />)
