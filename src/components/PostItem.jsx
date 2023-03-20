@@ -3,7 +3,7 @@ import React from 'react'
 
 function PostItem(props) {
 
-    const { title, body, id } = props.post;
+    const { title, body } = props.post;
     
     return (    
         <div className="post">
@@ -11,7 +11,7 @@ function PostItem(props) {
             <div className='post__content'>
 
                 <strong>
-                    {id}. {title}
+                    {props.number}. {title}
                 </strong>
                 
                 <div>
